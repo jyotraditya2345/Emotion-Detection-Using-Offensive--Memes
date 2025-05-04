@@ -1,54 +1,80 @@
-# women-offensive-setection-content-memes
-Women Meme Classification is an AI-powered system that classifies memes based on their filenames using TF-IDF vectorization and an SVM classifier. The project automates meme categorization into topics like leadership, shopping, working, and kitchen-related content. 
+Emotion Detection Using Offensive Memes
+This project focuses on detecting and classifying offensive memes based on the emotions they evoke, using machine learning techniques. By analyzing meme filenames and associated metadata, the system automatically identifies emotional tones such as anger, humor, sarcasm, or hate. The goal is to support better content moderation and understanding of the emotional impact of offensive media.
 
-# Women Meme Classification  
+Project Title and Description
+Project Title: Emotion Detection Using Offensive Memes
+Description: This is an AI-based system for categorizing memes into emotional categories by analyzing filenames and associated text data. The model uses TF-IDF vectorization and an SVM classifier to automate classification tasks and help organize meme datasets based on the emotions they express.
 
-## 📌 Project Overview  
-This project **classifies memes based on filenames** using **TF-IDF vectorization** and an **SVM classifier**. It organizes images into four categories:  
-- **Women Leadership Memes**  
-- **Women Shopping Memes**  
-- **Working Women Memes**  
-- **Women in Kitchen Memes**  
+Folder Structure
+emotion-detection-offensive-memes/
+│
+├── dataset/
+│   ├── Angry Memes/
+│   ├── Sarcastic Memes/
+│   ├── Humorous Memes/
+│   └── Hateful Memes/
+│
+├── model/
+│   └── emotion_classifier.pkl
+│
+├── src/
+│   ├── train_emotion_model.py
+│   ├── classify_emotions.py
+│   └── evaluate_emotions.py
+│
+├── reports/
+│   └── emotion_evaluation_report.html
 
-The model analyzes image filenames and predicts the correct category, ensuring proper dataset organization.  
+Source Code
 
----
+train_emotion_model.py – Preprocesses meme filenames and trains the SVM classifier using TF-IDF features.
 
-## ⚙️ Features  
-✔️ **Automated Classification:** Uses machine learning to categorize memes.  
-✔️ **TF-IDF Vectorization:** Converts filenames into numerical data.  
-✔️ **SVM Classifier:** Predicts meme categories with high accuracy.  
-✔️ **Misplacement Detection:** Identifies incorrectly categorized images.  
-✔️ **Performance Evaluation:** Generates accuracy reports and a confusion matrix.  
+classify_emotions.py – Loads the trained model and classifies memes in the test set.
 
----
+evaluate_emotions.py – Evaluates the classifier and generates detailed performance reports.
 
-## 🗂 Dataset Structure  
-Organized into labeled folders:  
-Each folder contains image files (**.jpg, .jpeg, .png**) representing memes for that category.  
+Documentation
 
----
+Key Features
+Automated classification of memes into emotional categories.
 
-## 🚀 How It Works  
-### **1️⃣ Training the Model**  
-- Extracts **image filenames** and applies **TF-IDF vectorization**.  
-- Trains an **SVM classifier** to categorize memes.  
-- Saves the trained model as `filename_classifier.pkl`.  
+Uses TF-IDF vectorization to extract meaningful features from filenames.
 
-### **2️⃣ Classifying New Images**  
-- Loads the trained classifier.  
-- Predicts the category of filenames in a test folder.  
-- Generates a classification report and lists misplaced images.  
+Employs SVM classifier for high-accuracy emotion prediction.
 
-### **3️⃣ Model Evaluation**  
-- Runs tests on a labeled dataset.  
-- Computes **accuracy, precision, recall, and F1-score**.  
-- Generates a **confusion matrix** and **evaluation report (`model_evaluation_report.html`)**.  
+Identifies incorrectly categorized images for review.
 
----
+Generates comprehensive reports, including confusion matrix and metrics.
 
-## 🔧 Installation & Setup  
-1️⃣ **Clone the Repository**  
-```bash
-git clone https://github.com/your-username/women-meme-classification.git
-cd women-meme-classification
+Dataset Structure
+
+The dataset is organized into clearly labeled folders, each representing a specific emotional category:
+
+Angry Memes
+
+Sarcastic Memes
+
+Humorous Memes
+
+Hateful Memes
+
+Installation Instructions
+
+Clone the repository
+git clone https://github.com/yourusername/emotion-detection-offensive-memes.git
+cd emotion-detection-offensive-memes
+
+Install dependencies
+pip install -r requirements.txt
+
+Train the emotion detection model
+python src/train_emotion_model.py
+
+Classify new memes
+python src/classify_emotions.py
+
+Evaluate the model
+python src/evaluate_emotions.py
+
+
+
