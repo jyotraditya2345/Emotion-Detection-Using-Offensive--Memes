@@ -58,9 +58,6 @@ Humorous Memes
 Hateful Memes
 
 ⚙️ Installation Instructions
-Clone the repository
-git clone https://github.com/yourusername/emotion-detection-offensive-memes.git
-cd emotion-detection-offensive-memes
 
 Install dependencies
 pip install -r requirements.txt
