@@ -1,76 +1,111 @@
-🎯 Emotion Detection Using Offensive Memes
-This project focuses on detecting and classifying offensive memes based on the emotions they evoke, using machine learning techniques. By analyzing meme filenames and associated metadata, the system automatically identifies emotional tones such as anger, humor, sarcasm, or hate. The goal is to support better content moderation and gain insights into the emotional impact of offensive media.
+# 🧠 Emotion Detection on Offensive Memes
 
-📝 Project Title and Description
-Project Title: Emotion Detection Using Offensive Memes
-Description: This is an AI-based system for categorizing memes into emotional categories by analyzing filenames and associated text data. The model uses TF-IDF vectorization and an SVM classifier to automate classification tasks and help organize meme datasets based on the emotions they express.
+A deep learning project to detect emotions in offensive memes using image and text analysis. This project leverages CNNs, OCR, and NLP techniques to classify memes based on the emotions they evoke, especially in offensive contexts.
 
-📁 Folder Structure
-css
+## 📌 Project Objective
+
+To create an AI system capable of:
+- Detecting **emotions** (e.g., anger, sadness, fear, etc.) present in **offensive memes**.
+- Classifying memes using both **visual content** and **text extracted** from them.
+- Providing useful insights to researchers and moderation systems in handling toxic content online.
+
+---
+
+## 🧩 Features
+
+- OCR extraction from meme images using Tesseract.
+- CNN model to analyze visual content of memes.
+- Text classification using pretrained NLP models.
+- Final emotion classification using a fusion of image and text features.
+- Clean dataset structure with preprocessing utilities.
+- CSV output mapping image files to their emotion categories.
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- TensorFlow / Keras
+- OpenCV
+- Tesseract OCR
+- NLTK / SpaCy
+- Pandas / NumPy
+- Matplotlib / Seaborn
+
+---
+
+## 📁 Folder Structure
+
+emotion-detection-memes/
+│
+├── data/
+│ ├── offensive_memes/
+│ │ ├── meme1.jpg
+│ │ ├── ...
+│
+├── ocr_extraction.py # Extract text from memes
+├── image_preprocessing.py # Resize, normalize meme images
+├── cnn_model.py # CNN model for image-based classification
+├── text_classification.py # NLP-based emotion detection from text
+├── fusion_model.py # Combine image and text for final prediction
+├── utils.py # Common utility functions
+├── predict.py # Run inference and generate output
+├── results/
+│ └── predictions.csv # Output mapping of meme to emotion
+│
+└── README.md
+
+
+---
+
+## 🚀 How to Run
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/emotion-detection-memes.git
+   cd emotion-detection-memes
+Install dependencies
+
+bash
 Copy
 Edit
-emotion-detection-offensive-memes/
-│
-├── dataset/
-│   ├── Angry Memes/
-│   ├── Sarcastic Memes/
-│   ├── Humorous Memes/
-│   └── Hateful Memes/
-│
-├── model/
-│   └── emotion_classifier.pkl
-│
-├── src/
-│   ├── train_emotion_model.py
-│   ├── classify_emotions.py
-│   └── evaluate_emotions.py
-│
-├── reports/
-│   └── emotion_evaluation_report.html
-💻 Source Code
-train_emotion_model.py – Preprocesses meme filenames and trains the SVM classifier using TF-IDF features.
-
-classify_emotions.py – Loads the trained model and classifies memes in the test set.
-
-evaluate_emotions.py – Evaluates the classifier and generates detailed performance reports.
-
-📚 Documentation
-✅ Key Features
-Automated classification of memes into emotional categories
-
-Uses TF-IDF vectorization to extract meaningful features from filenames
-
-Employs SVM classifier for high-accuracy emotion prediction
-
-Identifies incorrectly categorized images for review
-
-Generates comprehensive reports including confusion matrix and classification metrics
-
-🗂️ Dataset Structure
-The dataset is organized into clearly labeled folders, each representing a specific emotional category:
-
-Angry Memes
-
-Sarcastic Memes
-
-Humorous Memes
-
-Hateful Memes
-
-⚙️ Installation Instructions
-
-Install dependencies
 pip install -r requirements.txt
+Download Tesseract OCR
 
-Train the emotion detection model
-python src/train_emotion_model.py
+Tesseract Installation Guide
 
-Classify new memes
-python src/classify_emotions.py
+Place your dataset
 
-Evaluate the model
-python src/evaluate_emotions.py
+Store your meme images inside the data/offensive_memes/ folder.
 
+Run the pipeline
 
+bash
+Copy
+Edit
+python predict.py
+Check results
+
+Outputs saved in results/predictions.csv
+
+📊 Results
+Meme Image	Detected Emotion
+meme1.jpg	Anger
+meme2.jpg	Sadness
+meme3.jpg	Fear
+
+(Include plots or confusion matrix here if available)
+
+👨‍💻 Contributors
+Jyotiraditya (Team Lead, Code and Integration)
+
+Raman Sharma (Dataset Preparation, Testing)
+
+Anurag Singh Chuhan (Model Development, Analysis)
+
+Supervisors: Dr. Vivek Sehgal, Dr. Kushal Kanwar
+
+📜 Acknowledgments
+This project is developed as part of our academic research work. We are thankful to our professors for their guidance and to the open-source community for providing tools and libraries.
 
 
