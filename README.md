@@ -60,10 +60,6 @@ emotion-detection-memes/
 
 ## 🚀 How to Run
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/emotion-detection-memes.git
-   cd emotion-detection-memes
 Install dependencies
 
 bash
@@ -94,7 +90,6 @@ meme1.jpg	Anger
 meme2.jpg	Sadness
 meme3.jpg	Fear
 
-(Include plots or confusion matrix here if available)
 
 👨‍💻 Contributors
 Jyotiraditya (Team Lead, Code and Integration)
